@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import gamingimg from "../assets/images/gamingimg.jpg";
 import "../styles/home.scss";
 const Home = () => {
   return (
@@ -14,17 +13,14 @@ const Home = () => {
 
           <div className="container-wrapper">
             <div className="card gamingcard">
-              <img
-                src={gamingimg}
-                alt="game logo"
-                className="responsive-img"
-              ></img>
               <div className="container">
-                <h4>
+                <h3>
                   <b>Gaming</b>
-                </h4>
-                <p>
-                  Gaming is the running of specialized applications known as
+                </h3>
+                <p><img
+                    style={{float:"none"}}
+                    src="https://img.icons8.com/plasticine/100/000000/nintendo-gamecube-controller.png"
+                  />Gaming is the running of specialized applications known as
                   electronic games or video games on game consoles like X-box
                   and Playstation or on personal computers (in which case the
                   activity is known as online gaming). The term "gaming"
