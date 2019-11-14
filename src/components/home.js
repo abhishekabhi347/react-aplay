@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import gamingimg from "../assets/gamingimg.jpg";
+import gamingimg from "../assets/images/gamingimg.jpg";
 import "../styles/home.scss";
 const Home = () => {
   return (
