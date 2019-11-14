@@ -8,6 +8,11 @@ const NavBar = () => {
       <nav>
         <ul>
           <li>
+            <Link to="/" className="apptitle">
+              <b>APlay</b>
+            </Link>
+          </li>
+          <li>
             <Link to="/home">Home</Link>
           </li>
           <li>
