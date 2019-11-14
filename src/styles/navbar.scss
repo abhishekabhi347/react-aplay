@@ -1,54 +1,38 @@
 nav {
-
   ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  border: 1px solid #97f3eb;
-  background-color: rgba(151, 243, 235,0.9);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #97f3eb;
+    background-color: rgba(151, 243, 235, 0.9);
   }
 
   li {
-  float: left;
+    float: left;
   }
 
   li a {
-  display: block;
-  color: #666;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
   }
 
   li a:hover:not(.apptitle) {
-   background-color: #ddd;
+    background-color: #ddd;
   }
 
   li a.active {
-  color: white;
-  background-color: #4CAF50;
+    color: white;
+    background-color: #4caf50;
   }
 }
 
-@media only screen and (max-width: 768px) {
-  nav{
-      ul {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-  
-    ul li a {
-      float: left;
-      padding: 15px;
-    }
-  }
-}
-
-@media screen and (max-width: 400px) {
-  nav{
-    ul li a {
+@media screen and (max-width: 650px) {
+  nav {
+    ul li {
       text-align: center;
       float: none;
     }

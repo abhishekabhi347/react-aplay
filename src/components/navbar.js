@@ -18,6 +18,12 @@ const NavBar = () => {
           <li>
             <Link to="/playzone">Play zone</Link>
           </li>
+          <li>
+            <Link to="">..Soon</Link>
+          </li>
+          <li>
+            <Link to="">..Soon</Link>
+          </li>
         </ul>
       </nav>
     </Fragment>
