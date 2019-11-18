@@ -19,7 +19,7 @@ const NavBar = () => {
             <Link to="/playzone">Play zone</Link>
           </li>
           <li>
-            <Link to="">..Soon</Link>
+            <Link to="/notes">Notes</Link>
           </li>
           <li>
             <Link to="">..Soon</Link>
