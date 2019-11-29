@@ -2,30 +2,45 @@ import React, { Fragment, useState } from "react";
 
 const NewTasks = () => {
   const [formdata, setFormData] = useState({
-    tasks: []
+    tasks: "",
+    createdOn: new Date(),
+    isCompleted: false
   });
-
-  const { tasks } = formdata;
-
+  const { tasks, createdOn, isCompleted } = formdata;
+  const onChange = e => {
+    setFormData({ ...formdata, [e.target.name]: e.target.value });
+  };
+  const db = openDatabase("mydb", "1.0", "Tasks DB", 2 * 1024 * 1024);
   const onSubmit = e => {
     e.preventDefault();
-    alert(formdata);
+    alert(Math.floor(Math.random() * 90000) + 10000);
+    const randID = Math.floor(Math.random() * 90000) + 10000;
+    db.transaction(function(tx) {
+      tx.executeSql("CREATE TABLE IF NOT EXISTS TASKS (id unique, task)");
+      tx.executeSql(
+        `INSERT INTO TASKS (id,task,createdOn,isCompleted) VALUES (${randID},${JSON.stringify(
+          formdata.tasks
+        )},${JSON.stringify(createdOn)},${JSON.stringify(isCompleted)} )`
+      );
+    });
+    //window.localStorage.setItem("Notes", JSON.stringify(formdata));
   };
   return (
     <Fragment>
-      <from
+      <form
         name="frmnewtask"
         onSubmit={e => {
           onSubmit(e);
         }}
       >
-        {tasks.length > 0 ? <p>tasks</p> : <p>nill</p>}
         <div>
           <textarea
-            name="txtnewtask"
+            name="tasks"
             id="txtnewtask"
             style={{ resize: "none" }}
             rows="4"
+            value={tasks}
+            onChange={e => onChange(e)}
           ></textarea>
           <button type="submit" name="btnAddNew" id="btnAddNew">
             Add
@@ -35,7 +50,7 @@ const NewTasks = () => {
             Remove
           </button>
         </div>
-      </from>
+      </form>
     </Fragment>
   );
 };
