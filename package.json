@@ -16,7 +16,7 @@
     "postbuild": "react-snap"
   },
   "devDependencies": {
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "react-scripts": "latest",
     "react-snap": "^1.23.0"
   },
